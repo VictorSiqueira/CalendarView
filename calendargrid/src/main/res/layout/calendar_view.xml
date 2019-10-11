@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:id="@+id/calendar_year_text"
+        android:layout_gravity="right"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.nurik.calendar.YearSelectionView
+        android:layout_below="@id/calendar_year_text"
+        android:id="@+id/calendar_year_selection_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
+    <com.nurik.calendar.DaysBarView
+        android:id="@+id/calendar_days_bar_view"
+        style="@style/CalendarWeekDaysBar"
+        android:layout_below="@id/calendar_year_selection_view" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendar_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendar_days_bar_view" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/calendar_days_bar_view"
+        android:background="@drawable/calendar_days_of_week_bar_shadow" />
+</RelativeLayout>
