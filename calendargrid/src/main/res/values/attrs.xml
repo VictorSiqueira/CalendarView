@@ -10,6 +10,7 @@
         <attr name="calendar_grid_on_selected_dates" format="boolean" />
         <attr name="calendar_grid_color" format="color" />
         <attr name="calendar_day_bar_background" format="color" />
+        <attr name="calendar_date_today_text_color" format="color" />
         <attr name="calendar_day_bar_text_color" format="color" />
         <attr name="calendar_year_selection_background" format="color" />
         <attr name="calendar_year_selection_arrows_color" format="color" />
