@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="36dp"
+        app:calendar_date_background="@color/colorPrimary"
         tools:layout_editor_absoluteX="75dp" />
 
 </RelativeLayout>

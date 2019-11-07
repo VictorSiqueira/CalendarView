@@ -7,9 +7,12 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
+import android.widget.TextView
 import androidx.annotation.AttrRes
+import androidx.core.widget.ImageViewCompat
 import com.nurik.calendar.extension.dpToPix
 import com.nurik.calendar.extension.spToPix
+import com.nurik.calendar.style.CalendarStyleAttributes
 import getColorInt
 
 /**
@@ -48,6 +51,8 @@ class CalendarDateView @JvmOverloads constructor(
 
     private var dayNumberCalculatedWidth = 0.0f
     private var currentStateTextColor: Int = getColorInt(R.color.calendar_date_text_color)
+    private var todayBackgroundColor: Int = getColorInt(R.color.calendar_date_today_day_bg)
+
 
     var textColorStateList: ColorStateList? = null
 
@@ -100,7 +105,7 @@ class CalendarDateView @JvmOverloads constructor(
 
     private fun Canvas.drawBG() {
         var p2 = Paint()
-        p2.color = getColorInt(R.color.daybg)
+        p2.color = todayBackgroundColor
         drawRect(0f, height/2.2f, width*1.0f, height*1f, p2);
     }
 
@@ -175,5 +180,9 @@ class CalendarDateView @JvmOverloads constructor(
         if (stateList != null) {
             currentStateTextColor = stateList.getColorForState(drawableState, currentStateTextColor)
         }
+    }
+
+    fun applyStyle(styleAttributes: CalendarStyleAttributes) {
+
     }
 }
