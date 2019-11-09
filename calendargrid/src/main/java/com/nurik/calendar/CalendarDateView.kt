@@ -144,10 +144,10 @@ class CalendarDateView @JvmOverloads constructor(
             val xPos = width / 2.0f
             val yPos = height * 0.9f
 
-            var t = "" + dateIndicators.size + " post";
+            var t = "" /*+ dateIndicators.size + " "+legend
             if (dateIndicators.size > 1) {
-                t += "s"
-            }
+                t = "" + dateIndicators.size + " "+plural
+            }*/
             drawText(t, xPos - (p.measureText(t) / 2.0f), yPos, p)
         }
     }
